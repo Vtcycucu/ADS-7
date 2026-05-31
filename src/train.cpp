@@ -51,14 +51,3 @@ int Train::getLength() {
 int Train::getOpCount() {
     return countOp;
 }
-Train::~Train() {
-    if (!first) return;
-    Car* cur = first->next;
-    while (cur != first) {
-        Car* next = cur->next;
-        delete cur;
-        cur = next;
-    }
-    delete first;
-    first = nullptr;
-}
