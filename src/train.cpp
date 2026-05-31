@@ -59,7 +59,6 @@ Train::~Train() {
         delete cur;
         cur = next;
     }
-
     delete first;
     first = nullptr;
 }
